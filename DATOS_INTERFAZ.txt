@@ -1,0 +1,58 @@
+######################################################################################################################
+                                                   MENU
+                                 EMULADOR DE UNA RDAP CON EPANET Y WNTR
+######################################################################################################################
+RECOMENDACIONES: ESCRIBA LA RESPUESTA A LA PREGUNTA EN EL SIGUIENTE REGLÓN 
+SI LA RESPUESTA ES "NO", NO ES NECESARIO DILIGENCIAR LAS DEMAS PREGUNTAS QUE SE DERIVA
+ESCRIBA EL NOMBRE DE LO NODOS O TUBERÍAS SEPARADOS DE UNA COMA CUANDO NECESITE ESCRIBIR VARIOS  
+
+;Interfaz
+
+1; Ingrese la cantidad de días que dura la simulación
+Rta1;10
+2;¿La red cuenta con medidores de presión?,SI O NO: 
+Rta2;SI
+2.1;Si su respuesta es SI, mencione el nombre de los nodos existentes en la red que tiene medidores de presión:  
+Rta2.1;N-2,N-9
+3;¿La red cuenta con medidores de caudal?,SI O NO:
+Rta3;SI
+3.1;Si su respuesta es SI, mencione el nombre de las tubería existentes en la red que tiene medidores de caudal:  
+Rta3.1;Tub-1,Tub-13
+
+########################################;INFORMACIÓN ESCENARIO FUGAS####################################################
+
+4;¿Desea simular la red con un escenario de fugas?,SI O NO: 
+Rta4;SI
+4.1;Si su respuesta es SI, mencione el nombre de los nodos existentes en la red donde se presentan fugas:
+Rta4.1;N-2,N-9
+4.2;Si su respuesta es SI, ingrese el valor del área del orificio de fuga en (m2) para cada nodo, de forma ordenada y separados por una coma:
+Rta4.2;0.003,0.002
+4.3;Si su respuesta es SI, ingrese la hora en que inicia la fuga para cada nodo, de forma ordenada y separados por una coma:
+Rta4.3;5,6
+4.4;Si su respuesta es SI, ingrese la hora en que finaliza la fuga para cada nodo, de forma ordenada y separados por una coma: 
+Rta4.4;8,9 
+
+#################################################;INFORMACIÓN ESCENARIO DEMANDA##################################################
+
+5;¿Desea simular la red con un escenario de variación de demanda?,SI O NO:
+Rta5;SI
+5.1;Si su respuesta es SI, ingrese el valor mínimo del factor multiplicador para variar la demanda en la red:
+Rta5.1;0.9
+5.2;Si su respuesta es SI, ingrese el valor máximo del factor multiplicador para variar la demanda en la red:
+Rta5.2;1.1
+
+#################################################;INFORMACIÓN ESCENARIO RUGOSIDAD##################################################
+6;¿Desea simular la red con un escenario de variación de la rugosidad en los tubos de la red?,SI O NO:
+Rta6;SI
+6.1;Si su respuesta es SI, ingrese el valor mínimo del factor multiplicador para variar la rugosidad en la red:
+Rta6.1;0.9
+6.2;Si su respuesta es SI, ingrese el valor máximo del factor multiplicador para variar la rugosidad en la red:
+Rta6.2;1.1
+
+#################################################;INFORMACIÓN ESCENARIO TUBERÍAS CERRADAS##################################################
+7;¿Desea simular la red con un escenario de tuberías cerradas en la red?,SI O NO:
+Rta7;SI
+7.1;Si su respuesta es SI, ingrese el nombre de cada tubería que desea cerrar en la red:
+Rta7.1;Tub-1,Tub-8
+
+ 
